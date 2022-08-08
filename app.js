@@ -20,7 +20,7 @@ const User = require("./model/user");
 
 app.post("/register", async (req, res) => {
 
-    // Our register logic starts here
+
     try {
       // Get user input
       const { first_name, last_name, email, password } = req.body;
@@ -57,7 +57,7 @@ app.post("/register", async (req, res) => {
           expiresIn: "2h",
         }
       );
-      // save user token
+      
       user.token = token;
   
       // return new user
